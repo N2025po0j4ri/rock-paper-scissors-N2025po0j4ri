@@ -14,8 +14,8 @@ class RockPaperScissors {
    */
   generateCPUResponse(){
     const acceptedValues = [ `rock`, `paper`, `scissors` ];
-
-    return ;
+    const randomIndex = Math.floor(Math.random() * acceptedValues.length);
+    return acceptedValues[randomIndex];
   }
   /**
    * returns one of the following values: `win`, `lose`, `tie`
