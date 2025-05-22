@@ -14,20 +14,22 @@
     <div class="container">
         <!-- WORK FROM INSIDE THIS CONTAINER-->
         <h1>Rock Paper Scissors</h1>
+
         <div id="welcome-screen">
-        <form id="name-form">
-            <div>
-                <label for="username">Your Name.</label>
-                <input 
-                    type="text" 
-                    id="username" 
-                    name="username" 
-                    placeholder="Enter Name Here...." 
-                />
-                <button type="submit" id="start-game-button">Start Game!</button>
-            </div>
-        </form>
+            <form id="name-form">
+                <div>
+                    <label for="username">Your Name.</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter Name Here...." 
+                    />
+                    <button type="submit" id="start-game-button" class="btn btn-primary">Start Game!</button>
+                </div>
+            </form>
         </div>
+
         <div id="game-screen">
             <div id="score-tally">
                 <p id="score">User: 0 v CPU: 0</p>
@@ -41,7 +43,7 @@
                         <option>Paper</option>
                         <option>Scissors</option>
                     </select>
-                    <button type="submit" id="go-button">Go!</button>
+                    <button type="submit" id="go-button" class="btn btn-success">Go!</button>
                 </div>
             </form>
 
