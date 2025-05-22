@@ -65,7 +65,20 @@ startGameButton.addEventListener(`click`, function () {
 
 // go-button EventListener
 goButton.addEventListener(`click`, function () {
-  
+  // Prevent form submission (since the button is in a <form>)
+  event.preventDefault();
+
+  // Get user selection from the dropdown
+  const selection = userSelection.value;
+
+  // Call the play method from the game object
+  game.play(selection);
+
+  // Update the score display
+  updateScoreTallyUI();
+
+  // Update the game history display
+  updateGameHistoryUI();
 });
 
 // If you're doing the extra-credit, uncomment the below: reset-game-button
