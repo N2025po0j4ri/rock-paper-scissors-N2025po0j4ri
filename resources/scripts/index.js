@@ -15,9 +15,16 @@ let game;
 gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
-function updateScoreTallyUI(){
+function updateScoreTallyUI() {
+  if (!game || !game.username || !game.score) return;
 
+  const username = game.username;
+  const userScore = game.score.user;
+  const cpuScore = game.score.cpu;
+
+  scoreParagraph.textContent = `${username}: ${userScore}  v  CPU: ${cpuScore}`;
 }
+
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
