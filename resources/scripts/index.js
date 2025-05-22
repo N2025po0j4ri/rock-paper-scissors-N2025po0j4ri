@@ -1,21 +1,31 @@
 // Elements
-const welcomeScreen = document.getElementById('welcome-screen');
-const gameScreen = document.getElementById('game-screen');
-const startGameButton = document.getElementById('start-game-button');
-const userNameInput = document.getElementById('username');
-const userSelection = document.getElementById('user-selection');
-const goButton = document.getElementById('go-button');
-const scoreParagraph = document.getElementById('score');
-const gameHistoryParagraph = document.getElementById('game-history');
+const welcomeScreen = document.getElementById(`welcome-screen`);
+const gameScreen = document.getElementById(`game-screen`);
+const startGameButton = document.getElementById(`start-game-button`);
+const userName = document.getElementById(`username`);
+const userSelection = document.getElementById(`user-selection`);
+const goButton = document.getElementById(`go-button`);
+const scoreParagraph = document.getElementById(`score-tally`);
+const gameHistoryParagraph = document.getElementById(`game-history`);
 
-// Instantiate game (declared but not initialized)
+// instantiate the game object from the `RockPaperScissors` class.
 let game;
 
-// Hide game screen initially
-gameScreen.classList.add('d-none');
+// hide game screen
+gameScreen.classList.add(`d-none`);
 
-// Start Game Button Event Listener
-startGameButton.addEventListener('click', function (e) {
+// updateScoreTallyUI
+function updateScoreTallyUI(){
+
+}
+
+// updateGameHistoryUI
+function updateGameHistoryUI(){
+
+}
+
+// start-game-button EventListener
+startGameButton.addEventListener(`click`, function () {
   e.preventDefault(); // prevent form submission
 
   // a. Get username from input
