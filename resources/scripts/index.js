@@ -27,9 +27,20 @@ function updateScoreTallyUI() {
 
 
 // updateGameHistoryUI
-function updateGameHistoryUI(){
+function updateGameHistoryUI() {
+  if (!game || !Array.isArray(game.gameHistoryLog)) return;
 
+  // Clear current history
+  gameHistoryParagraph.textContent = '';
+
+  // Add each log entry from gameHistoryLog to the paragraph
+  game.gameHistoryLog.forEach(entry => {
+    const p = document.createElement('p');
+    p.textContent = entry;
+    gameHistoryParagraph.appendChild(p);
+  });
 }
+
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
