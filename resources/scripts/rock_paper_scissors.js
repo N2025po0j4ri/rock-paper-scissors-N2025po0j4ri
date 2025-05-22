@@ -55,8 +55,51 @@ class RockPaperScissors {
    * 
    * @param {string} userSelection user selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
-  play(userSelection){
+  play(userSelection) {
+  // 1. Get CPU random selection
+  const cpuSelection = this.generateCPUResponse();
 
+  // 2. Determine winner
+  const result = this.determineWinner(userSelection, cpuSelection);
+
+  // 3. Update score tally
+  if (result === 'win') {
+    this.score.user++;
+  } else if (result === 'lose') {
+    this.score.cpu++;
   }
+  // tie: no score changes
+
+  // 4. Add entry to game history log
+  // Assuming the player's name is stored in this.playerName
+  const playerName = this.playerName || 'User'; // fallback name
+
+  // Capitalize selections for display
+  const userChoiceFormatted = userSelection.charAt(0).toUpperCase() + userSelection.slice(1);
+  const cpuChoiceFormatted = cpuSelection.charAt(0).toUpperCase() + cpuSelection.slice(1);
+
+  // Create message based on result
+  let resultText;
+  if (result === 'win') {
+    resultText = `${playerName} wins`;
+  } else if (result === 'lose') {
+    resultText = 'CPU wins';
+  } else {
+    resultText = "It's a tie";
+  }
+
+  const logEntry = `${playerName} selected ${userChoiceFormatted}, CPU selected ${cpuChoiceFormatted}: ${resultText}`;
+  this.gameHistoryLog.push(logEntry);
+
+  // Optionally, return the round details
+  return {
+    userSelection,
+    cpuSelection,
+    result,
+    score: this.score,
+    gameHistoryLog: this.gameHistoryLog
+  };
+  }
+
 
 }
