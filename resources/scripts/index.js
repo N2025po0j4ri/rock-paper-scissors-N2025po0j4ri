@@ -1,20 +1,21 @@
-// Elements
-const welcomeScreen = document.getElementById(`welcome-screen`);
-const gameScreen = document.querySelector(`#game-screen`);
-const startGameButton = document.getElementById(`start-game-button`);
-const userName = document.getElementById(`username`);
-const userSelection = document.getElementById(`user-selection`);
-const goButton = document.getElementById(`go-button`);
-const scoreParagraph = document.getElementById(`score-tally`);
-const gameHistoryParagraph = document.getElementById(`game-history`);
+// Get element references
+const welcomeScreen = document.getElementById('welcome-screen');
+const gameScreen = document.querySelector('#game-screen');
+const startGameButton = document.getElementById('start-game-button');
+const userNameInput = document.getElementById('username');
+const userSelection = document.getElementById('user-selection');
+const goButton = document.getElementById('go-button');
+const scoreParagraph = document.getElementById('score');
+const gameHistoryParagraph = document.getElementById('game-history');
+const resetGameButton = document.getElementById('reset-game-button'); // Make sure this exists in your HTML
 
-// instantiate the game object from the `RockPaperScissors` class.
+// Game instance
 let game;
 
-// hide game screen
-gameScreen.classList.add(`d-none`);
+// Hide game screen initially
+gameScreen.classList.add('d-none');
 
-// updateScoreTallyUI
+// Update score UI
 function updateScoreTallyUI() {
   if (!game || !game.username || !game.score) return;
 
@@ -25,15 +26,14 @@ function updateScoreTallyUI() {
   scoreParagraph.textContent = `${username}: ${userScore}  v  CPU: ${cpuScore}`;
 }
 
-
-// updateGameHistoryUI
+// Update game history UI
 function updateGameHistoryUI() {
   if (!game || !Array.isArray(game.gameHistoryLog)) return;
 
-  // Clear current history
-  gameHistoryParagraph.textContent = '';
+  // Clear history
+  gameHistoryParagraph.innerHTML = '';
 
-  // Add each log entry from gameHistoryLog to the paragraph
+  // Add log entries
   game.gameHistoryLog.forEach(entry => {
     const p = document.createElement('p');
     p.textContent = entry;
@@ -41,47 +41,49 @@ function updateGameHistoryUI() {
   });
 }
 
+// Start game button click handler
+startGameButton.addEventListener('click', function (event) {
+  event.preventDefault();
 
-// start-game-button EventListener
-startGameButton.addEventListener(`click`, function () {
-  e.preventDefault(); // prevent form submission
-
-  // a. Get username from input
   const username = userNameInput.value.trim();
 
-  // optional: validate input
   if (!username) {
     alert("Please enter your name to start the game.");
     return;
   }
 
-  // b. Instantiate game object
   game = new RockPaperScissors(username);
 
-  // c. Hide welcome screen and show game screen
   welcomeScreen.classList.add('d-none');
   gameScreen.classList.remove('d-none');
-});
 
-// go-button EventListener
-goButton.addEventListener(`click`, function (event) {
-  // Prevent form submission (since the button is in a <form>)
-  event.preventDefault();
-
-  // Get user selection from the dropdown
-  const selection = userSelection.value;
-
-  // Call the play method from the game object
-  game.play(selection);
-
-  // Update the score display
   updateScoreTallyUI();
-
-  // Update the game history display
   updateGameHistoryUI();
 });
 
-// If you're doing the extra-credit, uncomment the below: reset-game-button
-// resetGameButton.addEventListener(`click`, function(e) { 
-  
-// });
+// Go button click handler
+goButton.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const selection = userSelection.value;
+  game.play(selection);
+
+  updateScoreTallyUI();
+  updateGameHistoryUI();
+});
+
+// Optional: Reset button handler
+if (resetGameButton) {
+  resetGameButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    userNameInput.value = '';
+    game = null;
+
+    gameScreen.classList.add('d-none');
+    welcomeScreen.classList.remove('d-none');
+
+    scoreParagraph.textContent = '';
+    gameHistoryParagraph.textContent = '';
+  });
+}
