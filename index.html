@@ -16,30 +16,25 @@
         <h1>Rock Paper Scissors</h1>
 
         <div id="welcome-screen">
-            <div id="name-form-container">
-                <form id="name-form">
-                    <div id="name-input-group" class="form-group">
-                        <div>
-                            <label for="username" class="form-label">Type your Name:</label>
-                        </div>
-                        <div>
-                            <input 
-                                type="text" 
-                                id="username" 
-                                name="username" 
-                                placeholder="Enter Name Here...." 
-                                class="form-control"
-                            />
-                        </div>
-                        <div class="mt-3">
-                            <button type="submit" id="start-game-button" class="btn btn-primary">
-                                Start Game!
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <form id="name-form">
+                <div class="form-group">
+                <label for="username" class="form-label">Type your Name:</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Enter Name Here...." 
+                    class="form-control"
+                />
+                <div class="mt-3">
+                    <button type="submit" id="start-game-button" class="btn btn-primary">
+                    Start Game!
+                    </button>
+                </div>
+                </div>
+            </form>
         </div>
+
 
         <div id="game-screen">
             <div id="score-tally">
