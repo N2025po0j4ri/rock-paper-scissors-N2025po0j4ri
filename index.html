@@ -2,66 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors</title>
-    <!-- Bootstrap Styles-->
-    <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/styles/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <!-- Bootstrap Styles-->
+  <link rel="stylesheet" href="resources/styles/bootstrap.min.css" />
+  <link rel="stylesheet" href="resources/styles/styles.css" />
 </head>
 
 <body>
-    <div class="container">
-        <!-- WORK FROM INSIDE THIS CONTAINER-->
-        <h1>Rock Paper Scissors</h1>
+  <div class="container">
+    <!-- WORK FROM INSIDE THIS CONTAINER-->
+    <h1>Rock Paper Scissors</h1>
 
-        <div id="welcome-screen">
-            <form id="name-form">
-                <div class="form-group">
-                <label for="username" class="form-label">Type your Name:</label>
-                <input 
-                    type="text" 
-                    id="username" 
-                    name="username" 
-                    placeholder="Enter Name Here...." 
-                    class="form-control"
-                />
-                <div class="mt-3">
-                    <button type="submit" id="start-game-button" class="btn btn-primary">
-                    Start Game!
-                    </button>
-                </div>
-                </div>
-            </form>
+    <div id="welcome-screen">
+      <form id="name-form">
+        <div class="form-group">
+          <label for="username" class="form-label">Type your Name:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter Name Here..."
+            class="form-control"
+          />
         </div>
-
-
-        <div id="game-screen">
-            <div id="score-tally">
-                <p id="score">User: 0 v CPU: 0</p>
-            </div>
-
-            <form id="game-form">
-                <div class="form-group">
-                    <label for="user-selection">Select your choice</label>
-                    <select id="user-selection" name="user-selection" class="custom-select">
-                        <option>Rock</option>
-                        <option>Paper</option>
-                        <option>Scissors</option>
-                    </select>
-                    <button type="submit" id="go-button" class="btn btn-success">Go!</button>
-                </div>
-            </form>
-
-            <button id="reset-game-button" class="btn btn-danger mt-3">Reset Game</button>
-
-            <p id="game-history"></p>
-        </div>
+        <button type="button" id="start-game-button" class="btn btn-primary">Start Game!</button>
+      </form>
     </div>
 
-    <!-- Our own Scripts -->
-    <script src="resources/scripts/rock_paper_scissors.js"></script>
-    <script src="resources/scripts/index.js"></script>
+    <div id="game-screen">
+      <div id="score-tally">
+        <p id="score">User: 0 v CPU: 0</p>
+      </div>
+
+      <form id="game-form">
+        <div class="form-group">
+          <label for="user-selection">Select your choice</label>
+          <select id="user-selection" name="user-selection" class="custom-select">
+            <option>Rock</option>
+            <option>Paper</option>
+            <option>Scissors</option>
+          </select>
+        </div>
+        <button type="button" id="go-button" class="btn btn-success">Go!</button>
+      </form>
+
+      <button id="reset-game-button" class="btn btn-danger mt-3">Reset Game</button>
+
+      <p id="game-history"></p>
+    </div>
+  </div>
+
+  <!-- Our own Scripts -->
+  <script src="resources/scripts/rock_paper_scissors.js"></script>
+  <script src="resources/scripts/index.js"></script>
 </body>
 
 </html>
