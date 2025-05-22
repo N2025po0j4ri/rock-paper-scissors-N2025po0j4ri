@@ -1,34 +1,38 @@
 // Elements
-const welcomeScreen = document.getElementById(`welcome-screen`);
-const gameScreen = ;
-const startGameButton = ;
-const userName = ;
-const userSelection = ;
-const goButton = ;
-const scoreParagraph = ;
-const gameHistoryParagraph = ;
+const welcomeScreen = document.getElementById('welcome-screen');
+const gameScreen = document.getElementById('game-screen');
+const startGameButton = document.getElementById('start-game-button');
+const userNameInput = document.getElementById('username');
+const userSelection = document.getElementById('user-selection');
+const goButton = document.getElementById('go-button');
+const scoreParagraph = document.getElementById('score');
+const gameHistoryParagraph = document.getElementById('game-history');
 
-// instantiate the game object from the `RockPaperScissors` class.
+// Instantiate game (declared but not initialized)
 let game;
 
-// hide game screen
-gameScreen.classList.add(`d-none`);
+// Hide game screen initially
+gameScreen.classList.add('d-none');
 
-// updateScoreTallyUI
-function updateScoreTallyUI(){
+// Start Game Button Event Listener
+startGameButton.addEventListener('click', function (e) {
+  e.preventDefault(); // prevent form submission
 
-}
+  // a. Get username from input
+  const username = userNameInput.value.trim();
 
-// updateGameHistoryUI
-function updateGameHistoryUI(){
+  // optional: validate input
+  if (!username) {
+    alert("Please enter your name to start the game.");
+    return;
+  }
 
-}
+  // b. Instantiate game object
+  game = new RockPaperScissors(username);
 
-// start-game-button EventListener
-startGameButton.addEventListener(`click`, function () {
-  const username = 
-  game = new RockPaperScissors(userName);
-  // Complete
+  // c. Hide welcome screen and show game screen
+  welcomeScreen.classList.add('d-none');
+  gameScreen.classList.remove('d-none');
 });
 
 // go-button EventListener
