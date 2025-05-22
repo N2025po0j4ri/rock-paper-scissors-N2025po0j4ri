@@ -1,6 +1,6 @@
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
-const gameScreen = document.getElementById(`game-screen`);
+const gameScreen = document.querySelector(`#game-screen`);
 const startGameButton = document.getElementById(`start-game-button`);
 const userName = document.getElementById(`username`);
 const userSelection = document.getElementById(`user-selection`);
