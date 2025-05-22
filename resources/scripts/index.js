@@ -64,7 +64,7 @@ startGameButton.addEventListener(`click`, function () {
 });
 
 // go-button EventListener
-goButton.addEventListener(`click`, function () {
+goButton.addEventListener(`click`, function (event) {
   // Prevent form submission (since the button is in a <form>)
   event.preventDefault();
 
