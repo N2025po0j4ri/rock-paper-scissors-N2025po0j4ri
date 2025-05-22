@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Type your title here</title>
+    <title>Rock Paper Scissors</title>
     <!-- Bootstrap Styles-->
     <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
     <link rel="stylesheet" href="resources/styles/styles.css" />
@@ -16,33 +16,30 @@
         <h1>Rock Paper Scissors</h1>
 
         <div id="welcome-screen">
-        <div id="name-form-container">
-            <form id="name-form">
-                <div id="name-input-group">
-                    <div>
-                        <label for="username" class="form-label">Your Name.</label>
+            <div id="name-form-container">
+                <form id="name-form">
+                    <div id="name-input-group" class="form-group">
+                        <div>
+                            <label for="username" class="form-label">Type your Name:</label>
+                        </div>
+                        <div>
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                placeholder="Enter Name Here...." 
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="mt-3">
+                            <button type="submit" id="start-game-button" class="btn btn-primary">
+                                Start Game!
+                            </button>
+                        </div>
                     </div>
-                    <div>
-                        <input 
-                            type="text" 
-                            id="username" 
-                            name="username" 
-                            placeholder="Enter Name Here...." 
-                            class="form-control"
-                        />
-                    </div>
-                    <div class="mt-3">
-                        <button type="submit" id="start-game-button" class="btn btn-primary w-100">
-                            Start Game!
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-
-
-
 
         <div id="game-screen">
             <div id="score-tally">
@@ -50,7 +47,7 @@
             </div>
 
             <form id="game-form">
-                <div>
+                <div class="form-group">
                     <label for="user-selection">Select your choice</label>
                     <select id="user-selection" name="user-selection" class="custom-select">
                         <option>Rock</option>
