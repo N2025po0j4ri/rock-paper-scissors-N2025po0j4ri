@@ -78,8 +78,6 @@ class RockPaperScissors {
     this.score.user++;
   } else if (result === 'lose') {
     this.score.cpu++;
-  } else if (result === 'tie') {
-    this.score.user++;
   }
   // tie: no score changes
 
