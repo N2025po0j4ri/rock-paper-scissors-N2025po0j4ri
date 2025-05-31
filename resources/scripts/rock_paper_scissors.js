@@ -34,7 +34,7 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection) {
-  if (userSelection === cpuSelection) {
+  if (cpuSelection === userSelection) {
     return 'win';
   }
 
@@ -67,6 +67,8 @@ class RockPaperScissors {
     this.score.user++;
   } else if (result === 'lose') {
     this.score.cpu++;
+  } else if (result === 'tie') {
+    this.score.user++;
   }
   // tie: no score changes
 
