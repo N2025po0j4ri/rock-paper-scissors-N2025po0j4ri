@@ -37,14 +37,25 @@ class RockPaperScissors {
   if (userSelection === cpuSelection) {
     return 'win';
   }
-
+  /*
   if (
     (userSelection === 'rock' && cpuSelection === 'scissors') ||
     (userSelection === 'paper' && cpuSelection === 'rock') ||
     (userSelection === 'scissors' && cpuSelection === 'paper')
   ) {
     return 'win';
-  }
+  }*/
+
+  const winConditions = {
+      rock: 'scissors',
+      paper: 'rock',
+      scissors: 'paper'
+    };
+
+    if (winConditions[userSelection] === cpuSelection) {
+      return 'win';
+    }
+
 
   // If not tie or win, then lose
   return 'lose';
