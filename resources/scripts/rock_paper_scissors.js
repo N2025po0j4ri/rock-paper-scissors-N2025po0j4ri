@@ -78,7 +78,7 @@ class RockPaperScissors {
 
   // Create message based on result
   let resultText;
-  if (userSelection === cpuSelection) {
+  if (result === 'tie') {
       resultText = `It's a tie, but ${playerName} wins`;
     } else if (result === 'win') {
       resultText = `${playerName} wins`;
