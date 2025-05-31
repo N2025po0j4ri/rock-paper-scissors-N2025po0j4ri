@@ -34,7 +34,7 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection) {
-  if (userSelect === cpuSelection) {
+  if (userSelection === cpuSelection) {
     return 'win';
   }
 
@@ -80,12 +80,12 @@ class RockPaperScissors {
 
   // Create message based on result
   let resultText;
-  if (result === 'win') {
-    resultText = `${playerName} wins`;
-  } else if (result === 'lose') {
-    resultText = 'CPU wins';
-  } else {
-    resultText = "It's a tie";
+  if (cpuSelection === userSelection) {
+      resultText = `It's a tie, but ${playerName} wins`;
+    } else if (result === 'win') {
+      resultText = `${playerName} wins`;
+    } else {
+      resultText = 'CPU wins';
   }
 
   const logEntry = `${playerName} selected ${userChoiceFormatted}, CPU selected ${cpuChoiceFormatted}: ${resultText}`;
