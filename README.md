@@ -15,7 +15,7 @@ Instructions to this assignment can be found [here](https://reedws.github.io/IT3
 ## Self-Evaluation: 
 how many points out of 20 does your team deserve on this assignment. Revise the assignment grading guideline and assignment rubrics for guidance.
 
-I deserve 19/20 points on this assignment. First, I forked the assignment on Github Desktop. Furthermore, I have edited every single js file with code. Then, I installed npm tests through visual studio code. I reran my tests each time I completed every single js file. Then, I ran the tests using npm test to ensure that the code passes the test. Also, the tests passed on npm.
+I deserve 19/20 points on this assignment. First, I forked the assignment on Github Desktop. Furthermore, I have edited every single js file with code. Then, I installed npm tests through visual studio code. I reran my tests each time I completed every single js file. Then, I ran the tests using npm test to ensure that the code passes the test. Also, all the tests passed on npm.
 
 ## Team Reflection:
 - Where did you encounter struggles today, and what did you do to deal with it?
