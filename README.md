@@ -15,12 +15,12 @@ Instructions to this assignment can be found [here](https://reedws.github.io/IT3
 ## Self-Evaluation: 
 how many points out of 20 does your team deserve on this assignment. Revise the assignment grading guideline and assignment rubrics for guidance.
 
-I deserve 19/20 points on this assignment. First, I forked the assignment on Github Desktop. Furthermore, I have edited every single js file with code. Then, I installed npm tests through visual studio code. I reran my tests each time I completed every single js file. Then, I ran the tests using npm test to ensure that the code passes the test. Also, all the tests passed on npm.
+I deserve 19/20 points on this assignment. First, I forked the assignment on Github Desktop. Furthermore, I have edited every single js file with code. Then, I installed npm tests through visual studio code. I reran my tests each time I completed every single js file. However, that logic messed up the tie logic, causing the score to award the cpu instead of the player. So, I fixed my code logic through assigning it as a tie. This helped me fix the code, Then, I ran the tests using npm test to ensure that the code passes the test. Also, all the tests passed on npm.
 
 ## Team Reflection:
 - Where did you encounter struggles today, and what did you do to deal with it?
 
-In this project, I have worked alone to make the rock paper scissors game. I struggled with ensuring that the player wins the game. To deal with it, I edited the winning logic with tie and checked parts of the code when the player wins. This helped me ensure that the CPU isn't winning certain rounds in the rock paper scissors game. 
+In this project, I have worked alone to make the rock paper scissors game. I struggled with ensuring that the player wins the game. To deal with it, I edited the winning logic with tie and checked parts of the code when the player wins. A mistake I did was use user == cpu to assign a win. This helped me ensure that the CPU isn't winning certain rounds in the rock paper scissors game.
 
 ### How long it took us to finish this?
 
