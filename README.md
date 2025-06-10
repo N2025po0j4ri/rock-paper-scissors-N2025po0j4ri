@@ -15,13 +15,13 @@ Instructions to this assignment can be found [here](https://reedws.github.io/IT3
 ## Self-Evaluation: 
 how many points out of 20 does your team deserve on this assignment. Revise the assignment grading guideline and assignment rubrics for guidance.
 
-I deserve 19/20 points on this assignment. First, I forked the assignment on Github Desktop. Furthermore, I have edited every single js file with code. Then, I installed npm tests through visual studio code. I reran my tests each time I completed every single js file. However, that logic messed up the tie logic, causing the score to award the cpu instead of the player. So, I fixed my code logic through assigning it as a tie. This helped me fix the code, Then, I ran the tests using npm test to ensure that the code passes the test. Also, all the tests passed on npm.
+I deserve 19 out of 20 points on this assignment. First, I forked the assignment using GitHub Desktop. I edited every JavaScript file with the needed code. Then, I installed the npm tests using Visual Studio Code. After finishing each file, I reran the tests. At first, there was a problem with the tie logic, it gave the point to the CPU instead of the player. I fixed this by correcting the code to handle ties properly. After that, I ran the tests again using npm test to make sure everything worked. All the tests passed.
 
 ## Team Reflection:
 - Where did you encounter struggles today, and what did you do to deal with it?
 
-In this project, I have worked alone to make the rock paper scissors game. I struggled with ensuring that the player wins the game. To deal with it, I edited the winning logic with tie and checked parts of the code when the player wins. A mistake I did was use user == cpu to assign a win. This helped me ensure that the CPU isn't winning certain rounds in the rock paper scissors game.
+In this project, I worked alone to make the Rock Paper Scissors game. I had trouble making sure the player could win. To fix it, I changed the winning logic and added a check for ties. I also checked the parts of the code where the player should win. One mistake I made was using user == cpu to decide a win. Fixing this helped me make sure the CPU wasn't winning certain rounds by mistake.
 
 ### How long it took us to finish this?
 
-It took me 6-7 hours to finish this game. Ultimately, I was spending time to debug within 30 mins, spent 2-3 hours on testing out the code, and I was spending the rest of the hours on ensuring that the code is running smoothly with no errors.
+It took me 6-7 hours to finish the game. I spent about 30 minutes debugging. I spent 2-3 hours testing the code. The rest of the time was spent making sure the code ran smoothly with no errors.
